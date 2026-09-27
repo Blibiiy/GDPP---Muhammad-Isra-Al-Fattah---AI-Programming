@@ -1,15 +1,38 @@
 using UnityEngine;
 using UnityEngine.Events;
-public class InputManager : MonoBehaviour
+using UnityEngine.InputSystem;
+using static GameInputAction;
+public class InputManager : MonoBehaviour, IPlayerActions
 {
-    // Membuat event OnSpaceInput 
-    public UnityEvent OnSpaceInput;
-    private void Update()
+    // Variable untuk menyimpan reference object input action 
+    private GameInputAction _inputAction;
+
+    public void OnInteract(InputAction.CallbackContext context)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (context.performed)
         {
-            // Trigger event OnSpaceInput 
-            OnSpaceInput?.Invoke();
+            // Memunculkan log interact di console  
+            // ketika input interact ditekan 
+            Debug.Log("Interact");
         }
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        Debug.Log(context);
+    }
+
+    private void Awake()
+    {
+        // Membuat object GameInputAction dan menyimpan reference nya 
+        // ke variable _inputAction 
+        _inputAction = new GameInputAction();
+        // Mengaktifkan input action 
+        _inputAction.Enable();
+        // Mengaktifkan action map Player 
+        _inputAction.Player.Enable();
+        // Memberi tahu bahwa kelas ini akan mendeteksi input dari 
+        // action map Player 
+        _inputAction.Player.SetCallbacks(this);
     }
 }
