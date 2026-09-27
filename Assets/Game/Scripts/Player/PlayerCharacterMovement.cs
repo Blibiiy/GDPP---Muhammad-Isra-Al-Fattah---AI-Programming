@@ -33,6 +33,8 @@ public class PlayerCharacterMovement : MonoBehaviour
     [SerializeField]
     private float _acceleration = 0.5f;
 
+    public bool IsSprint => _isSprint;
+
     private void CalculateAcceleration()
     {
         // Mengecek apakah player character bergerak atau tidak 
