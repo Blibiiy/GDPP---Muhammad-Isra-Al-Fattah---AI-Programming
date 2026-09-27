@@ -1,0 +1,75 @@
+# ==========================================
+# Unity
+# ==========================================
+
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# MemoryCaptures
+[Mm]emoryCaptures/
+
+# Asset Store tools
+[Aa]ssets/AssetStoreTools*
+
+# ==========================================
+# Unity Generated Files
+# ==========================================
+
+*.pidb
+*.pidb.meta
+*.pdb
+*.pdb.meta
+*.mdb
+*.mdb.meta
+*.opendb
+*.VC.db
+
+# ==========================================
+# Visual Studio / Rider / IDE
+# ==========================================
+
+.vs/
+.idea/
+.vscode/
+
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.booproj
+*.tmp
+*.userprefs
+
+# ==========================================
+# Unity Crash Reports
+# ==========================================
+
+sysinfo.txt
+
+# ==========================================
+# OS Generated Files
+# ==========================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# Build Artifacts
+# ==========================================
+
+*.apk
+*.aab
+*.unitypackage
+
+# ==========================================
+# Gradle
+# ==========================================
+
+.gradle/
